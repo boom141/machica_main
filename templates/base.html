@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="{{url_for('static', filename='images/home-logo.png')}}" type="image/x-icon">
@@ -16,6 +15,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='appointment.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='OTP.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='animation.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='chatbot.css')}}">
     <title>{%block title%}{%endblock%}</title>
 </head>
 <body>
@@ -65,11 +65,41 @@
         </div>
       </nav>
     {%block content%}
-    {%endblock%} 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    {%endblock%}
+      <div class="container-fluid border border-black border-2 position-absolute d-flex flex-column row-gap-3 justify-content-end align-items-end pb-3">
+        <div id="chatbot" class="card w-25">
+            <div class="card-header text-white">
+                <b>Machica</b> 
+            </div>
+            <div id="chat-body" class="card-body position-relative d-flex flex-column">
+                <p class="text-muted text-center card-note">
+                    Pre defined question will be answered automatically by the system.
+                    However custom questions will take some time to be answered.
+                </p>
+                <p class="rounded-3 faq-text p-1">
+                    What are your services?
+                </p>
+                <p class="rounded-3 faq-text p-1">
+                    What is your store hours?
+                </p>
+                <p class="rounded-3 faq-text p-1 d-block">
+                    What is the location of your clinic?
+                </p>
+            </div>
+            <div class="card-footer d-flex flex-row align-items-center column-gap-3 bg-white">
+                <input id="user-question" type="text" class="form-control" placeholder="Ask a question...">
+                <img id="chat-send" class="chat-send" width="32" height="32" src="https://img.icons8.com/ios-glyphs/60/198754/sent.png" alt="sent"/>
+            </div>
+        </div>
+    
+        <button id="chatbot-btn" class="btn btn-success rounded-5 p-1">
+            <img width="48" height="48" id="message-icon" src="https://img.icons8.com/material-sharp/48/FFFFFF/speech-bubble-with-dots.png" alt="speech-bubble-with-dots"/>
+            <img width="48" height="48" id="close-icon"   src="https://img.icons8.com/ios-filled/50/FFFFFF/circled-chevron-down.png" alt="circled-chevron-down"/>
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='services_details.js')}}"></script>
     <script src="{{url_for('static', filename='app.js')}}"></script>
 </body>

@@ -1,0 +1,39 @@
+.container-fluid{
+    height: 100vh;
+}
+.card-header{
+    background-color: #198754;
+}
+.card{
+    height: 70vh;
+    margin-right: 3rem;
+    box-shadow: 3px 3px 10px rgba(0,0,0,035);
+}
+.card-note{
+    font-size: small;
+}
+.card-body{
+    overflow-y: auto;
+}
+.faq-text{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.368);
+    font-size: medium;
+    float: right;
+    cursor: pointer;
+    margin-left: auto;
+}
+.system-chat-res{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.368);
+    font-size: medium;
+    float: left;
+    cursor: pointer;
+    margin-left: auto;
+}
+.user-query{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.368);
+    background-color: #198754;
+    font-size: medium;
+    float: right;
+    margin-left: auto;
+    color:white
+}

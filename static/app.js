@@ -132,3 +132,40 @@ $('.border-content').hover((e)=>{
   $(e.target).css({'transform': 'rotateY(0deg)', 'transform': 'skewY(0deg)'})
 })
 
+let chatbot_switch = false
+$("#chatbot").hide()
+$("#close-icon").hide()
+$("#chatbot-btn").click(()=>{
+    if (!chatbot_switch){
+        $("#message-icon").hide("fast")
+        $("#close-icon").show("fast")
+        $("#chatbot").show("fast")
+        chatbot_switch = !chatbot_switch
+    } else{
+        $("#chatbot").hide("fast")
+        $("#close-icon").hide("fast")
+        $("#message-icon").show("fast")
+        chatbot_switch = !chatbot_switch
+    }
+})
+
+const chat_send = document.getElementById("chat-send")
+const chat_body = document.getElementById("chat-body")
+const user_question = document.getElementById("user-question")
+chat_send.addEventListener("click",()=>{
+    $(chat_body).append(`<p class="rounded-3 user-query p-1">
+                                ${user_question.value}
+                            </p>`
+                        )
+    user_question.value = " "
+})
+
+const faq_text = document.querySelectorAll('.faq-text')
+
+faq_text.forEach((element,index)=>{
+    element.addEventListener("click",(e)=>{
+        fetch(`http://127.0.0.1:5000/query_${index}`)
+        .then(res => res.json())
+        .then(json => console.log(json))
+    })  
+})
