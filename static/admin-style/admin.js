@@ -1,4 +1,4 @@
-const admin_urls = [`${window.origin}/admin/dashboard`,`${window.origin}/admin/booking`,'https://machica-jickgmu6l-boom141.vercel.app']
+const admin_urls = [`${window.origin}/admin/dashboard`,`${window.origin}/admin/booking`,'https://machica-nowy3gms9-boom141.vercel.app']
 const admin_links = document.querySelectorAll('.navigation-container')
 
 
