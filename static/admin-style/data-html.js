@@ -67,13 +67,12 @@ class Daily_Schedule{
 
 
 class booking_Block{
-    constructor(day,month,service_name,scheduled_time,first_name,last_name,email,referenceId){
+    constructor(day,month,service_name,scheduled_time,fullname,email,referenceId){
         this.day = day
         this.month = month
         this.service_name = service_name
         this.scheduled_time = scheduled_time
-        this.first_name = first_name
-        this.last_name = last_name
+        this.fullname = fullname
         this.email = email
         this.referenceId = referenceId
     }   
@@ -85,7 +84,7 @@ class booking_Block{
                     </div>
                     <div class="book-details">
                         <p style="font-weight: 600; font-size: 1.2rem; line-height: 1.5rem; width: auto;" >${this.service_name}:${this.referenceId} <br>
-                            <span style="font-weight:300; font-size: 1rem;" >${this.first_name} ${this.last_name}: ${this.email}</span> <br>
+                            <span style="font-weight:300; font-size: 1rem;" >${this.fullname}: ${this.email}</span> <br>
                             <span style=" color: white; font-weight:300; font-size: .8rem; background-color: #337c73; padding: .3rem .3rem; border-radius: 20px;">${this.scheduled_time}</span>
                         </p>
                     </div>

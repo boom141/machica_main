@@ -3,7 +3,6 @@ window.onload = () =>{
     get_today_schedule()
     get_total_status()
     get_booking_list()
-    get_order_list()
 
 }
 
@@ -42,7 +41,7 @@ const load_user_data = (user_data) =>{
 
     $(userBlock_container).css('display','flex')
     for(user of user_data){
-        $(userBlock_container).append(new User_Block(user['first_name'],user['email'], 'block').render_html())
+        $(userBlock_container).append(new User_Block(user['fullname'],user['email'], 'block').render_html())
     }
     for(block of userBlock_container.children){
         block.addEventListener('click', userLogs)

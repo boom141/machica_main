@@ -1,4 +1,4 @@
-const admin_urls = ['admin/dashboard','admin/booking','admin/order','logout']
+const admin_urls = ['admin/dashboard','admin/booking','logout']
 const admin_links = document.querySelectorAll('.navigation-container')
 
 

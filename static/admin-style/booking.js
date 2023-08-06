@@ -26,7 +26,7 @@ const load_booking_list = (data) =>{
     
     for(book of data){
         let split_date = book['date'].split('-')
-        $(booking_section).append(new booking_Block(split_date[2],month_name[parseInt(split_date[1])-1],book['poa'],book['time'],book['first_name'],book['last_name'],book['email'],book['reference_id']).render_html())
+        $(booking_section).append(new booking_Block(split_date[2],month_name[parseInt(split_date[1])-1],book['POA'],book['time'],book['fullname'],book['email'],book['reference_code']).render_html())
     }
 
     document.querySelectorAll('.booking-button').forEach(elem =>{

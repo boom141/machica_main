@@ -1,8 +1,10 @@
-.container-fluid{
+.chatbot-main{
     height: 100vh;
+    border: 1px black solid;
 }
+
 .card-header{
-    background-color: #198754;
+    background-color: #337c73;
 }
 .card{
     height: 70vh;
@@ -31,9 +33,26 @@
 }
 .user-query{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.368);
-    background-color: #198754;
+    background-color: #337c73;
     font-size: medium;
     float: right;
     margin-left: auto;
     color:white
+}
+
+.btn-success{
+    background-color: #337c73!important;
+}
+
+.chat-send{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+#message-icon,#close-icon{
+    height: 48px;
+    width: 48px;
+    margin-top: .1rem;
+    cursor: pointer;
 }
