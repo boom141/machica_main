@@ -1,4 +1,4 @@
-const admin_urls = ['admin/dashboard','admin/booking','logout']
+const admin_urls = [`${window.origin}/admin/dashboard`,`${window.origin}/admin/booking`,'https://machica-jickgmu6l-boom141.vercel.app']
 const admin_links = document.querySelectorAll('.navigation-container')
 
 
@@ -17,7 +17,7 @@ for(element of admin_urls){
 
 admin_links.forEach((element,index)=>{
    element.addEventListener('click', e =>{
-        window.location = `${window.origin}/${admin_urls[index]}`
+        window.location = admin_urls[index]
    })
 })
 
