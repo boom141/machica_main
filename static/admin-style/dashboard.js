@@ -54,8 +54,8 @@ const load_today_schedule = (user_data) =>{
     }
 
     for(let data of user_data){
-        $(booking_container).append(new Daily_Schedule(data['first_name'],data['last_name'],
-        data['email'],data['poa'],data['time']).render_html())
+        $(booking_container).append(new Daily_Schedule(data['fullname'],
+        data['email'],data['POA'],data['time']).render_html())
     }
 
     finishAppointment(document.querySelectorAll('.book-today'))

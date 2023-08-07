@@ -34,9 +34,8 @@ class Monthly_Sold{
 
 
 class Daily_Schedule{
-    constructor(first_name,last_name,email,service_name,scheduled_time){
-        this.first_name = first_name
-        this.last_name = last_name
+    constructor(fullname,email,service_name,scheduled_time){
+        this.fullname = fullname
         this.email = email
         this.service_name = service_name
         this.scheduled_time = scheduled_time
@@ -45,7 +44,7 @@ class Daily_Schedule{
         return `<div class="book-today">
                 <div class="checker"></div>
                 <div class="profile-section">
-                    <strong>${this.first_name} ${this.last_name}</strong>
+                    <strong>${this.fullname}</strong>
                     <h6>${this.email}</h6 >
                 </div>
                 <span style="height: 100%; width: 1px; background-color: rgb(189, 189, 189);"></span>
