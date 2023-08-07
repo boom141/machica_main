@@ -63,7 +63,7 @@ const userLogs = e =>{
             for(list of user_log_list){
                 for(data of list){  
                     if('poa' in data)
-                        $('.user-container').append(new User_Block(`Type:${data['poa']}`,`${data['time']} | ${data['date']}`, 'none').render_html())
+                        $('.user-container').append(new User_Block(`Type:${data['POA']}`,`${data['time']} | ${data['date']}`, 'none').render_html())
                     else
                         $('.user-container').append(new User_Block(`Type:${data['product']}`,`${data['date']}`, 'none').render_html())
                 }
